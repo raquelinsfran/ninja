@@ -19,8 +19,27 @@ class Ninja {
         console.log(`${this.nombre} bebió sake y ganó 10 puntos de salud. Salud actual: ${this.salud}`);
     }
 }
+class Sensei extends Ninja {
+    constructor(nombre) {
+        super(nombre);
+        this.salud = 200;
+        this.fuerza = 10;
+        this.velocidad = 10;
+        this.sabiduria = 10;
+    }
 
+    speakWisdom = () => {
+        this.drinkSake();
+        console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses.");
+    }
+}
 const ninja1 = new Ninja("Hyabusa");
 ninja1.sayName();
 ninja1.showStats();
 ninja1.drinkSake();
+
+const splinter = new Sensei("Splinter");
+splinter.sayName();
+splinter.showStats();
+splinter.drinkSake();
+splinter.speakWisdom();
